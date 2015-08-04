@@ -17,11 +17,7 @@ main = do
             terminal           = "xterm",
 
             startupHook = do startup
-        }
---    `additionalKeysP`
---        [
---            ( "M-C-l", spawn "xdg-screensaver lock")
---        ]
+        } `additionalKeysP` [ ("M-C-l", spawn "xdg-screensaver lock") ]
 
 
 startup :: X ()
